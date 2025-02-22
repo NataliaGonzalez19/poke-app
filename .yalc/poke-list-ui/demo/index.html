@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <style>
+      body {
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from 'lit';
+      import '../poke-list-ui.js';
+
+      const header = 'Hello owc World!';
+
+      const pokemons = [
+        {
+          name: 'Bulbasaur',
+          type: 'Grass/Poison',
+          image:
+            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
+          evolutions: [
+            {
+              name: 'Ivysaur',
+              type: 'Grass/Poison',
+              image:
+                'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png',
+            },
+            {
+              name: 'Venusaur',
+              type: 'Grass/Poison',
+              image:
+                'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png',
+            },
+          ],
+        },
+        {
+          name: 'Charmander',
+          type: 'Fire',
+          image: 'charmander.png',
+          evolutions: [
+            {
+              name: 'Charmeleon',
+              type: 'Fire',
+              image: 'charmeleon.png',
+            },
+            {
+              name: 'Charizard',
+              type: 'Fire/Flying',
+              image: 'charizard.png',
+            },
+          ],
+        },
+        {
+          name: 'Squirtle',
+          type: 'Water',
+          image: 'squirtle.png',
+          evolutions: [
+            {
+              name: 'Wartortle',
+              type: 'Water',
+              image: 'wartortle.png',
+            },
+            {
+              name: 'Blastoise',
+              type: 'Water',
+              image: 'blastoise.png',
+            },
+          ],
+        },
+        {
+          name: 'Pikachu',
+          type: 'Electric',
+          image: 'pikachu.png',
+          evolutions: [
+            {
+              name: 'Raichu',
+              type: 'Electric',
+              image: 'raichu.png',
+            },
+          ],
+        },
+        {
+          name: 'Jigglypuff',
+          type: 'Normal/Fairy',
+          image: 'jigglypuff.png',
+          evolutions: [
+            {
+              name: 'Wigglytuff',
+              type: 'Normal/Fairy',
+              image: 'wigglytuff.png',
+            },
+          ],
+        },
+        {
+          name: 'Gengar',
+          type: 'Ghost/Poison',
+          image: 'gengar.png',
+          evolutions: [],
+        },
+        {
+          name: 'Machop',
+          type: 'Fighting',
+          image: 'machop.png',
+          evolutions: [
+            {
+              name: 'Machoke',
+              type: 'Fighting',
+              image: 'machoke.png',
+            },
+            {
+              name: 'Machamp',
+              type: 'Fighting',
+              image: 'machamp.png',
+            },
+          ],
+        },
+        {
+          name: 'Vulpix',
+          type: 'Fire',
+          image: 'vulpix.png',
+          evolutions: [
+            {
+              name: 'Ninetales',
+              type: 'Fire',
+              image: 'ninetales.png',
+            },
+          ],
+        },
+        {
+          name: 'Geodude',
+          type: 'Rock/Ground',
+          image: 'geodude.png',
+          evolutions: [
+            {
+              name: 'Graveler',
+              type: 'Rock/Ground',
+              image: 'graveler.png',
+            },
+            {
+              name: 'Golem',
+              type: 'Rock/Ground',
+              image: 'golem.png',
+            },
+          ],
+        },
+        {
+          name: 'Abra',
+          type: 'Psychic',
+          image: 'abra.png',
+          evolutions: [
+            {
+              name: 'Kadabra',
+              type: 'Psychic',
+              image: 'kadabra.png',
+            },
+            {
+              name: 'Alakazam',
+              type: 'Psychic',
+              image: 'alakazam.png',
+            },
+          ],
+        },
+        {
+          name: 'Machop',
+          type: 'Fighting',
+          image: 'machop.png',
+          evolutions: [
+            {
+              name: 'Machoke',
+              type: 'Fighting',
+              image: 'machoke.png',
+            },
+            {
+              name: 'Machamp',
+              type: 'Fighting',
+              image: 'machamp.png',
+            },
+          ],
+        },
+        {
+          name: 'Ditto',
+          type: 'Normal',
+          image: 'ditto.png',
+          evolutions: [],
+        },
+        {
+          name: 'Eevee',
+          type: 'Normal',
+          image: 'eevee.png',
+          evolutions: [
+            {
+              name: 'Vaporeon',
+              type: 'Water',
+              image: 'vaporeon.png',
+            },
+            {
+              name: 'Jolteon',
+              type: 'Electric',
+              image: 'jolteon.png',
+            },
+            {
+              name: 'Flareon',
+              type: 'Fire',
+              image: 'flareon.png',
+            },
+          ],
+        },
+        {
+          name: 'Snorlax',
+          type: 'Normal',
+          image: 'snorlax.png',
+          evolutions: [],
+        },
+      ];
+
+      render(
+        html` <poke-list-ui .pokemons=${pokemons}></poke-list-ui> `,
+        document.querySelector('#demo'),
+      );
+    </script>
+  </body>
+</html>

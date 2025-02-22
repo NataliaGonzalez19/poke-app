@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../poke-detail-ui.js';
+
+    const header = 'Hello owc World!';
+
+    const pokemon = [
+    {
+          name: 'Bulbasaur',
+          type: 'Grass/Poison',
+          image:
+            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
+          evolutions: [
+            {
+              name: 'Ivysaur',
+              type: 'Grass/Poison',
+              image:
+                'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png',
+            },
+            {
+              name: 'Venusaur',
+              type: 'Grass/Poison',
+              image:
+                'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png',
+            },
+          ],
+        },
+       
+    ];
+
+    render(
+      html`
+        <poke-detail-ui .pokemons=${pokemon}>
+        </poke-detail-ui>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

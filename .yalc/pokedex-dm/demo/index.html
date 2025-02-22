@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../pokedex-dm.js';
+
+    const url = 'http://localhost:3002/pokemon';
+    //const url = 'https://pokeapi.co/api/v2/pokemon/'
+    render(
+      html`
+        <pokedex-dm .url=${url}>
+          some light-dom
+        </pokedex-dm>
+      `,
+      document.querySelector('#demo')
+    );
+    const dm = document.querySelector('pokedex-dm');
+    document.addEventListener('DOMContentLoaded',event =>{
+      dm.searchPokemonList();
+    });
+    document.addEventListener('poke-list-search',event =>{
+      console.log(event.detail)
+      const firstPokemon = event.detail[0]
+      console.log("🚀 ~ firstPokemon:", firstPokemon.name)
+      dm.searchPokemonDetail(firstPokemon.name);
+    });
+    document.addEventListener('poke-detail-search',event =>{
+      console.log(event.detail)
+    });
+  </script>
+</body>
+</html>

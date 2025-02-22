@@ -1,0 +1,45 @@
+{
+  "name": "pokedex-dm",
+  "description": "Webcomponent pokedex-dm following open-wc recommendations",
+  "license": "MIT",
+  "author": "pokedex-dm",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./pokedex-dm.js": "./pokedex-dm.js"
+  },
+  "scripts": {
+    "analyze": "cem analyze --litelement",
+    "start": "web-dev-server",
+    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "test": "web-test-runner --coverage",
+    "test:watch": "web-test-runner --watch",
+    "storybook": "npm run analyze -- --exclude dist && storybook dev -p 8080",
+    "storybook:build": "npm run analyze -- --exclude dist && storybook build"
+  },
+  "dependencies": {
+    "lit": "^3.1.4"
+  },
+  "customElements": "custom-elements.json",
+  "eslintConfig": {
+    "extends": [
+      "@open-wc",
+      "prettier"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "yalcSig": "7457cdf04ff07845c4c3f65d896b1072"
+}

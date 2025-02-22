@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "packages": {
+    "pokedex-dm": {
+      "version": "0.0.0",
+      "signature": "7457cdf04ff07845c4c3f65d896b1072",
+      "file": true
+    },
+    "poke-list-ui": {
+      "version": "0.0.0",
+      "signature": "067ac543ebc6dbe437e370079c0877be",
+      "file": true
+    },
+    "poke-detail-ui": {
+      "version": "0.0.0",
+      "signature": "5c9521be088c500fdf45dbd8d11158f0",
+      "file": true
+    },
+    "modal-info-ui": {
+      "version": "0.0.0",
+      "signature": "4826b175bb64eb01a918b2b9e79c841b",
+      "file": true
+    }
+  }
+}

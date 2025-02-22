@@ -1,0 +1,45 @@
+{
+  "name": "poke-list-ui",
+  "description": "Webcomponent poke-list-ui following open-wc recommendations",
+  "license": "MIT",
+  "author": "poke-list-ui",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./poke-list-ui.js": "./poke-list-ui.js"
+  },
+  "scripts": {
+    "analyze": "cem analyze --litelement",
+    "start": "web-dev-server",
+    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "test": "web-test-runner --coverage",
+    "test:watch": "web-test-runner --watch",
+    "storybook": "npm run analyze -- --exclude dist && storybook dev -p 8080",
+    "storybook:build": "npm run analyze -- --exclude dist && storybook build"
+  },
+  "dependencies": {
+    "lit": "^3.1.4"
+  },
+  "customElements": "custom-elements.json",
+  "eslintConfig": {
+    "extends": [
+      "@open-wc",
+      "prettier"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "yalcSig": "067ac543ebc6dbe437e370079c0877be"
+}
