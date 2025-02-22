@@ -1,34 +1,65 @@
 <p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
+  <img width="200" src="https://open-wc.org/hero.png" alt="Open WC Logo">
 </p>
 
-## Open-wc Starter App
+# Open-wc Starter App
 
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
 
-## Quickstart
+## 🚀 Quickstart
 
-To get started:
+Para comenzar con el proyecto, sigue estos pasos:
 
-```bash
-npm run backend
-Ejecuta un servidor local
-Posterior en otra terminal
-npm run start
-# requires node 10 & npm 6 or higher
+### 1️⃣ Instalar Yalc globalmente (si aún no lo tienes):
+```sh
+npm install -g yalc
 ```
 
-## Scripts
+### 2️⃣ Restaurar dependencias locales con Yalc:
+```sh
+yalc install
+```
 
-- `start` runs your app for development, reloading on file changes
-- `start:build` runs your app after it has been built using the build command
-- `build` builds your app and outputs it in your `dist` directory
-- `test` runs your test suite with Web Test Runner
-- `lint` runs the linter for your project
-- `format` fixes linting and formatting errors
+### 3️⃣ Instalar dependencias del proyecto:
+```sh
+npm install
+```
 
-## Tooling configs
+### 4️⃣ Iniciar el servidor backend:
+```sh
+npm run backend
+```
+Esto ejecutará un servidor local.
 
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
+### 5️⃣ En otra terminal, ejecutar la aplicación:
+```sh
+npm run start
+```
+📌 *Nota: Requiere Node.js 10+ y npm 6+.*
 
-El proyecto fue diseñado con open-wc y con la herramienta yalc para control de los componentes (Simula un entorno bitbucket en local)
+---
+
+## 📜 Scripts Disponibles
+
+- `start` - Ejecuta la aplicación en modo desarrollo con recarga automática.
+- `start:build` - Ejecuta la aplicación después de haber sido compilada.
+- `build` - Construye la aplicación y la guarda en el directorio `dist`.
+- `test` - Ejecuta el conjunto de pruebas con Web Test Runner.
+- `lint` - Ejecuta el linter en el proyecto.
+- `format` - Corrige errores de linting y formateo.
+
+---
+
+## ⚙️ Configuración de Herramientas
+
+La mayoría de las configuraciones de herramientas están dentro del `package.json`, reduciendo la cantidad de archivos en el proyecto.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **[open-wc](https://open-wc.org/)** - Para el desarrollo de Web Components modernos.
+- **[Yalc](https://github.com/wclr/yalc)** - Para gestionar dependencias locales, simulando un entorno similar a Bitbucket en local.
+
+🚀 ¡Disfruta desarrollando con Open WC y Yalc! 🎉
+
